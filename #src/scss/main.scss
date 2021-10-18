@@ -2,6 +2,10 @@
 
 @use "sass:math";
 
+._icon-location, ._icon-phone {
+	color: $blueColor;
+}
+
 ._title {
 	@include adaptiv-value("font-size", 40, 24, 1);
 	font-weight: 700;

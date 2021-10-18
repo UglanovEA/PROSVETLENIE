@@ -1,1 +1,208 @@
 @use "sass:math";
+.header {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	&__wrapper {
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 3;
+	}
+	&__container {
+	}
+	&__body {
+		min-height: 130px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 5px 0px;
+	}
+	&__contact {
+		display: flex;
+	}
+	&__main {
+		display: flex;
+		// flex: 1 1 math.div(554, 1230) * 100%;
+		// background-color: rgb(196, 102, 102)
+	}
+	&__menu {
+		
+	}
+}
+.contact {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid $blueColor;
+	padding: 5px 0px;
+	&__location {
+		display: flex;
+	}
+	&__icon {
+		margin-right: 12px;
+	}
+	&__address {
+		color: $grayColor;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: math.div(20, 16) * 100%;
+	}
+}
+.phone {
+		display: flex;
+		align-items: center;
+	&__icon{
+		width: 30px;
+		height: 30px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		vertical-align:auto;
+		border: 1px solid $blueColor;
+		border-radius: 50%;
+		margin-right: 20px;
+	}
+	&__block {
+		display: flex;
+		flex-direction: column;
+	}
+	&__number {
+		display: inline-flex;
+		color:inherit;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: math.div(24, 20) * 100%;
+		margin-bottom: 5px;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	&__text {
+		color: $grayColor;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: math.div(20, 16) * 100%;
+	}
+}
+.menu {
+	width: 100%;
+	display: flex;
+	padding: 5px 0px;
+	&__logo {
+		display: flex;
+		flex: 0 1 554px;
+		color: $blueColor;
+		font-family: CaviarDreams;
+		font-weight: 700;
+		font-size: 36px;
+		line-height: math.div(46, 36) * 100%;
+	}
+	// .menu__img
+	&__img {
+	}
+
+	// .menu__body
+
+	&__body {
+		flex: 1 1 math.div(647, 1230) * 100%;
+	}
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content:space-evenly;
+		
+	}
+	&__item {
+		position: relative;
+		display: flex;
+		align-items:center;
+		justify-content:center;
+		flex-wrap: wrap;
+		padding: 5px 0px;
+		margin: 0px 3px;
+		@media (any-hover: hover) {
+			&:hover {
+				.menu__sub-list {
+					opacity: 1;
+					visibility: visible;
+					transform: translate(0px, 0px);
+					pointer-events: auto;
+				}
+				.menu__arrow {
+					transform: rotate(-180deg);
+				}
+				.menu__arrow,
+				.menu__link {
+					color: $blueColor;
+				}
+			}
+		}
+		@media (min-width: $md3+px) {
+			&:hover {
+				.menu__sub-list {
+					opacity: 1;
+					visibility: visible;
+					transform: translate(0px, 0px);
+					pointer-events: auto;
+				}
+				.menu__arrow {
+					transform: rotate(-180deg);
+				}
+				.menu__arrow,
+				.menu__link {
+					color: $blueColor;
+				}
+			}
+		}
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 15px 0px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__link {
+		color: inherit;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: math.div(22, 18) * 100%;
+		transition: color 0.3s ease 0s;
+	}
+	&__arrow {
+		font-size: 12px;
+		margin: 0px 0px 0px 8px;
+		transition: all 0.3s ease 0s;
+	}
+	&__sub-list {
+		position: relative;
+		flex: 1 1 100%;
+		background-color: $blueColor;
+		padding: 15px;
+		@media (min-width: $md3+px) {
+			opacity: 0;
+			visibility: hidden;
+			min-width: 200px;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			pointer-events:none;
+			transition: all 0.3s ease 0s;
+			transform: translate(0px, 10px)
+		}
+	}
+	&__sub-item {
+		&:not(:last-child) {
+			margin: 0px 0px 5px 0px;
+		}
+	}
+	&__sub-link {
+		color: #ffffff;
+		line-height:120%;
+	}
+}
+.icon-menu {
+}

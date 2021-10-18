@@ -1,4 +1,3 @@
-
 /**!
  * lightgallery.js | 1.1.3 | February 11th 2019
  * http://sachinchoolur.github.io/lightgallery.js/
