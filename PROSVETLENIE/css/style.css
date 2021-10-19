@@ -1025,53 +1025,61 @@ body.ie ._ibg img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 5px 0px;
+}
+
+.header__body::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 130px;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  -webkit-transition: left 0.3s ease 0s;
+  -o-transition: left 0.3s ease 0s;
+  transition: left 0.3s ease 0s;
+  z-index: 3;
 }
 
 .header__contact {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.header__main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 1px solid #75ABD6;
-  padding: 5px 0px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 0px;
+  z-index: 3;
 }
 
 .contact__location {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 10px 10px 0px;
 }
 
 .contact__icon {
-  margin-right: 12px;
+  margin-right: 20px;
 }
 
-.contact__address {
+.contact__text {
   color: #818181;
-  font-weight: 400;
   font-size: 16px;
+  font-weight: 400;
   line-height: 125%;
 }
 
-.phone {
+.contact__phone {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1081,93 +1089,54 @@ body.ie ._ibg img {
 }
 
 .phone__icon {
-  width: 30px;
-  height: 30px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-  vertical-align: auto;
-  border: 1px solid #75ABD6;
-  border-radius: 50%;
   margin-right: 20px;
 }
 
-.phone__block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 .phone__number {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   color: inherit;
-  font-weight: 700;
   font-size: 20px;
+  font-weight: 700;
   line-height: 120%;
-  margin-bottom: 5px;
-}
-
-.phone__number:hover {
-  text-decoration: underline;
 }
 
 .phone__text {
   color: #818181;
-  font-weight: 300;
   font-size: 16px;
+  font-weight: 300;
   line-height: 125%;
 }
 
 .menu {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 5px 0px;
 }
 
 .menu__logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 554px;
-          flex: 0 1 554px;
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 44.5528455285%;
+          flex: 1 1 44.5528455285%;
   color: #75ABD6;
   font-family: CaviarDreams;
-  font-weight: 700;
   font-size: 36px;
+  font-weight: 700;
   line-height: 127.7777777778%;
+  z-index: 3;
+}
+
+.menu__img {
+  margin-right: 15px;
 }
 
 .menu__body {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 52.6016260163%;
-          flex: 1 1 52.6016260163%;
-}
-
-.menu__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+      -ms-flex: 1 0 52.6016260163%;
+          flex: 1 0 52.6016260163%;
 }
 
 .menu__item {
@@ -1178,9 +1147,6 @@ body.ie ._ibg img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 5px 0px;
@@ -1189,8 +1155,8 @@ body.ie ._ibg img {
 
 .menu__link {
   color: inherit;
-  font-weight: 400;
   font-size: 18px;
+  font-weight: 400;
   line-height: 122.2222222222%;
   -webkit-transition: color 0.3s ease 0s;
   -o-transition: color 0.3s ease 0s;
@@ -1199,10 +1165,10 @@ body.ie ._ibg img {
 
 .menu__arrow {
   font-size: 12px;
-  margin: 0px 0px 0px 8px;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  margin: 0px 0px 0px 8px;
 }
 
 .menu__sub-list {
@@ -1223,7 +1189,22 @@ body.ie ._ibg img {
   line-height: 120%;
 }
 
+@media (min-width: 647px) {
+  .contact__location {
+    padding: 0px 10px 0px 0px;
+  }
+}
+
 @media (min-width: 767.98px) {
+  .menu__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+
   .menu__item:hover .menu__sub-list {
     opacity: 1;
     visibility: visible;
@@ -1258,6 +1239,7 @@ body.ie ._ibg img {
     -webkit-transform: translate(0px, 10px);
         -ms-transform: translate(0px, 10px);
             transform: translate(0px, 10px);
+    z-index: 3;
   }
 }
 
@@ -1299,12 +1281,31 @@ body.ie ._ibg img {
 }
 
 @media (max-width: 767.98px) {
+  .menu__body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    -webkit-transition: left 0.3s ease 0s;
+    -o-transition: left 0.3s ease 0s;
+    transition: left 0.3s ease 0s;
+    padding: 130px 15px 30px 15px;
+  }
+
   .menu__item {
     margin: 0px 0px 15px 0px;
   }
 
   .menu__item:last-child {
     margin-bottom: 0;
+  }
+
+  .menu__arrow._active {
+    -webkit-transform: rotate(-180deg);
+        -ms-transform: rotate(-180deg);
+            transform: rotate(-180deg);
   }
 }
 
