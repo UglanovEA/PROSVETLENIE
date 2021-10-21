@@ -618,7 +618,7 @@ textarea.input {
 
 ._icon-location,
 ._icon-phone {
-  color: #75ABD6;
+  color: #bfd2e1;
 }
 
 ._title {
@@ -1015,8 +1015,10 @@ body.ie ._ibg img {
 }
 
 .header__contact {
-  border-bottom: 1px solid #75ABD6;
+  position: relative;
+  border-bottom: 1px solid #BFD2E1;
   padding: 15px 0px;
+  z-index: 3;
 }
 
 .header__main {
@@ -1067,7 +1069,49 @@ body.ie ._ibg img {
 }
 
 .phone__icon {
+  position: relative;
+  width: 21px;
+  height: 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 12px;
+  border-radius: 50%;
+  border: 1px solid #bfd2e1;
+  -webkit-box-shadow: 0px 2px 4px #bfd2e1;
+          box-shadow: 0px 2px 4px #bfd2e1;
   margin-right: 20px;
+}
+
+.phone__icon::after {
+  content: "";
+  width: 39px;
+  height: 39px;
+  position: absolute;
+  border-radius: 50%;
+  border-bottom: 1px solid #bfd2e1;
+  -webkit-box-shadow: 0px 2px 4px #bfd2e1;
+          box-shadow: 0px 2px 4px #bfd2e1;
+  -webkit-transform: rotate(22deg);
+      -ms-transform: rotate(22deg);
+          transform: rotate(22deg);
+}
+
+.phone__icon::before {
+  content: "";
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px -1px 4px #bfd2e1;
+          box-shadow: 0px -1px 4px #bfd2e1;
+  border-top: 1px solid #bfd2e1;
 }
 
 .phone__number {
@@ -1115,7 +1159,6 @@ body.ie ._ibg img {
   font-family: CaviarDreams;
   font-size: 36px;
   font-weight: 700;
-  line-height: 127.7777777778%;
   z-index: 3;
 }
 
@@ -1290,14 +1333,14 @@ body.ie ._ibg img {
     -webkit-transition: left 0.3s ease 0s;
     -o-transition: left 0.3s ease 0s;
     transition: left 0.3s ease 0s;
-    padding: 170px 15px 30px 15px;
+    padding: 190px 15px 30px 15px;
   }
 
   .menu__body::before {
     content: "";
     position: fixed;
     width: 100%;
-    height: 170px;
+    height: 190px;
     top: 0;
     left: -100%;
     -webkit-transition: left 0.3s ease 0s;
