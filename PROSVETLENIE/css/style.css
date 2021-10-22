@@ -1011,21 +1011,18 @@ body.ie ._ibg img {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 2;
 }
 
 .header__contact {
-  position: relative;
   border-bottom: 1px solid #BFD2E1;
   padding: 15px 0px;
-  z-index: 3;
 }
 
 .header__main {
   padding: 15px 0px;
 }
 
-.contact__container {
+.contact__wrapper {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1113,6 +1110,11 @@ body.ie ._ibg img {
   border-top: 1px solid #bfd2e1;
 }
 
+.phone__block {
+  position: relative;
+  z-index: 3;
+}
+
 .phone__number {
   display: block;
   color: inherit;
@@ -1132,7 +1134,7 @@ body.ie ._ibg img {
   line-height: 125%;
 }
 
-.main__container {
+.main__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1222,7 +1224,7 @@ body.ie ._ibg img {
   display: none;
 }
 
-@media (min-width: 767.98px) {
+@media (min-width: 723px) {
   .menu__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1300,7 +1302,7 @@ body.ie ._ibg img {
 }
 
 @media (max-width: 994px) {
-  .main__container {
+  .main__wrapper {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1321,7 +1323,21 @@ body.ie ._ibg img {
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 723px) {
+  .header__main {
+    padding: 0px;
+  }
+
+  .contact__wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-bottom: 15px;
+  }
+
+  .contact__location {
+    display: none;
+  }
+
   .menu__body {
     width: 100%;
     height: 100%;
@@ -1332,21 +1348,21 @@ body.ie ._ibg img {
     -webkit-transition: left 0.3s ease 0s;
     -o-transition: left 0.3s ease 0s;
     transition: left 0.3s ease 0s;
-    padding: 190px 15px 30px 15px;
+    padding: 130px 15px 30px 15px;
   }
 
   .menu__body::before {
     content: "";
     position: fixed;
     width: 100%;
-    height: 190px;
+    height: 130px;
     top: 0;
     left: -100%;
     -webkit-transition: left 0.3s ease 0s;
     -o-transition: left 0.3s ease 0s;
     transition: left 0.3s ease 0s;
     background-color: #ffffff;
-    z-index: 2;
+    z-index: 1;
   }
 
   .menu__body._active {
@@ -1384,7 +1400,6 @@ body.ie ._ibg img {
   }
 
   .icon-menu {
-    margin-left: 32px;
     display: block;
     width: 30px;
     height: 18px;
@@ -1433,12 +1448,6 @@ body.ie ._ibg img {
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
     bottom: calc(50% - 1px);
-  }
-}
-
-@media (max-width: 767.98px) and (max-width: 1230px) {
-  .icon-menu {
-    margin-left: calc(15px + 17 * ((100vw - 320px) / 910));
   }
 }
 
