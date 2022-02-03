@@ -1,1 +1,78 @@
-// Заголовки, общие БЄМ блоки и проче...
+.block-main {
+}
+.main-block {
+	position: relative;
+	padding: rem(233) 0 rem(227);
+	// .main-block__container
+	&__container {
+	}
+	// .main-block__body
+	&__body {
+		position: relative;
+		max-width: rem(692);
+		background-color: rgba(255, 255, 255, 0.8);
+		border-radius: rem(23);
+		padding: rem(37) rem(47) rem(42);
+		z-index: 1;
+	}
+	// .main-block__promo
+	&__promo {
+		font-weight: 300;
+		font-size: rem(30);
+		line-height: math.div(37, 30);
+		color: $mainColor;
+		&:not(:last-child) {
+			margin-bottom: em(8, 30);
+		}
+	}
+	// .main-block__title
+	&__title {
+		font-family: CaviarDreams;
+		font-weight: 700;
+		font-size: rem(72);
+		line-height: math.div(91, 72);
+		color: $mainColor;
+		&:not(:last-child) {
+			margin-bottom: em(14, 72);
+		}
+	}
+	// .main-block__text
+	&__text {
+		font-weight: 300;
+		font-size: rem(24);
+		line-height: math.div(29, 24);
+		color: $mainText;
+		&:not(:last-child) {
+			margin-bottom: em(54, 24);
+		}
+	}
+	// .main-block__buttons
+	&__buttons {
+	}
+	// .main-block__img
+	&__img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 55.58%);
+		}
+		& img {
+			clip-path: polygon(0 0, 100% 0, 100% 93%, 82% 97%, 65% 100%, 35% 100%, 18% 97%, 0 93%);
+		}
+	}
+}
+.button {
+	&:not(:last-child) {
+		margin-right: rem(20);
+	}
+}
+// =============================================================================

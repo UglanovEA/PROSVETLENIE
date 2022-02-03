@@ -1,9 +1,13 @@
 //====================================================================================================
 .header {
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
 	// .header__top
 	&__top {
 		position: relative;
-		z-index: 2;
+		z-index: 3;
 		&::before {
 			content: "";
 			width: 100vw;
@@ -40,6 +44,9 @@
 		@media (max-width: $mobile) {
 			display: none;
 		}
+		&:hover {
+			color: $mainBlue;
+		}
 	}
 	// .top-header__phone
 	&__phone {
@@ -51,7 +58,6 @@
 	gap: rem(9);
 	cursor: pointer;
 	padding: rem(5) 0;
-	z-index: 2;
 	// .phone-top-header__icon
 	&__icon {
 		width: rem(47);
@@ -80,6 +86,11 @@
 	@media (max-width: $mobile) {
 		margin: 0 auto;
 	}
+	&:hover {
+		.phone-top-header__number {
+			color: $mainBlue;
+		}
+	}
 }
 .body-header {
 	padding: rem(10) 0;
@@ -95,11 +106,12 @@
 	// .body-header__menu
 	&__menu {
 		flex: 1 1 auto;
+		z-index: 2;
 	}
 }
 .logo-body-header {
 	padding: rem(5) rem(10) 0 0;
-	z-index: 2;
+	z-index: 3;
 	// .logo-body-header__link
 	&__link {
 		display: flex;
