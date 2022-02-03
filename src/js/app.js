@@ -12,7 +12,7 @@
 */
 
 // Включить/выключить FLS (Full Logging System) (в работе)
-window['FLS'] = true;
+window["FLS"] = true;
 
 // Подключение основного файла стилей
 import "../scss/style.scss";
@@ -30,7 +30,7 @@ flsFunctions.isWebp();
 /* Добавление loaded для HTML после полной загрузки страницы */
 // flsFunctions.addLoadedClass();
 /* Модуль для работы с меню (Бургер) */
-// flsFunctions.menuInit();
+flsFunctions.menuInit();
 /* Учет плавающей панели на мобильных устройствах при 100vh */
 // flsFunctions.fullVHfix();
 
@@ -39,7 +39,7 @@ flsFunctions.isWebp();
 Документация:
 Сниппет (HTML): spollers
 */
-// flsFunctions.spollers();
+flsFunctions.spollers();
 
 /*
 Модуль работы с табами
@@ -65,7 +65,7 @@ flsFunctions.isWebp();
 /*
 Модуль параллакса мышью
 Документация по работе в шаблоне:
-Сниппет (HTML): 
+Сниппет (HTML):
 */
 // import './libs/parallax-mouse.js'
 
@@ -137,7 +137,7 @@ import * as flsForms from "./files/forms/forms.js";
 Изменение дизайна скроллбара
 Документация по работе в шаблоне: В HTML добавляем к блоку атрибут data-simplebar
 Документация плагина: https://github.com/Grsmto/simplebar/tree/master/packages/simplebar
-Сниппет(HTML): 
+Сниппет(HTML):
 */
 // import './files/scroll/simplebar.js';
 
