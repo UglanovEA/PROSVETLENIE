@@ -5,6 +5,8 @@
 	}
 	.block-about {
 	}
+	.block-services {
+	}
 }
 // =============================================================================
 
@@ -238,3 +240,50 @@
 	}
 }
 // =============================================================================
+.services-block {
+	background-color: #e0e7ec;
+	@media (min-width: $mobile) {
+		display: flex;
+	}
+	// .services-block__img
+	&__img {
+	}
+	// .services-block__content
+	&__content {
+	}
+	// .services-block__container
+	&__container {
+	}
+	// .services-block__body
+	&__body {
+		padding: 73px 0px 75px 37px;
+	}
+	// .services-block__subtitle
+	&__subtitle {
+		font-weight: 300;
+		font-size: rem(30);
+		line-height: math.div(37, 30);
+		color: &mainColor;
+	}
+	// .services-block__title
+	&__title {
+		line-height: math.div(78, 72);
+		& span {
+			color: $mainBlue;
+		}
+	}
+	// .services-block__list
+	&__list {
+	}
+	// .services-block__item
+	&__item {
+	}
+	&__btn {
+	}
+	// .services-block__link
+	&__link {
+		font-size: rem(24);
+		line-height: math.div(29, 24);
+		color: inherit;
+	}
+}
