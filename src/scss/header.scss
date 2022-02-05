@@ -7,10 +7,10 @@
 	// .header__top
 	&__top {
 		position: relative;
-		z-index: 3;
+		z-index: 11;
 		&::before {
 			content: "";
-			width: 100vw;
+			width: 100%;
 			height: rem(1);
 			bottom: 0;
 			position: absolute;
@@ -106,12 +106,12 @@
 	// .body-header__menu
 	&__menu {
 		flex: 1 1 auto;
-		z-index: 2;
+		z-index: 10;
 	}
 }
 .logo-body-header {
 	padding: rem(5) rem(10) 0 0;
-	z-index: 3;
+	z-index: 11;
 	// .logo-body-header__link
 	&__link {
 		display: flex;
@@ -154,7 +154,7 @@
 				left: -100%;
 				transition: left 0.3s ease 0s;
 				background-color: #fff;
-				z-index: 2;
+				z-index: 10;
 			}
 			.menu-open & {
 				left: 0;
@@ -169,7 +169,7 @@
 		@media (min-width: $mobile) {
 			display: flex;
 			flex-wrap: wrap;
-			@include adaptiveValue("column-gap", 48, 15, 1200, 767.98);
+			@include adaptiveValue("column-gap", 48, 15, 1920, 767.98);
 		}
 	}
 	// .menu__item
