@@ -6,9 +6,9 @@
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
-	padding: rem(13) rem(101);
+	padding: rem(13) rem(0);
 	font-weight: 700;
-	@include adaptiveValue("width", 234, 185);
+	@include adaptiveValue("width", 387, 185);
 	@include adaptiveValue("font-size", 24, 18);
 	line-height: math.div(29, 24);
 	color: #ffffff;
@@ -27,10 +27,12 @@
 	}
 }
 .button-small {
+	@include adaptiveValue("width", 234, 185);
 	padding: rem(13) rem(13);
 	transition: all 0.3s ease 0s;
 }
 .button-border-small {
+	@include adaptiveValue("width", 234, 185);
 	padding: rem(13) rem(13);
 	background-color: #ffffff;
 	color: $mainBlue;

@@ -206,6 +206,35 @@
 						</div>
 					</div>
 				</section>
+				<section class="block-contact-phone phone-contact-block">
+					<div class="phone-contact-block__container">
+						<button class="phone-contact-block__btn _icon-arrowCircle"></button>
+						<h2 class="phone-contact-block__title _title">Свяжитесь <span>с нами</span></h2>
+						<div class="phone-contact-block__subtitle">Оставьте свои контакты и мы свяжемся с Вами</div>
+						<form class="phone-contact-block__form form" action="#">
+							<div class="phone-contact-block__name ">
+								<div class="phone-contact-block__icon _icon-user"></div>
+								<input
+								autocomplete="off"
+								type="text"
+								name="form[]"
+								data-error="Ошибка"
+								placeholder="Ваше имя"
+								class="phone-contact-block__input"
+							/>
+							</div>
+
+							<input
+								autocomplete="off"
+								type="tel"
+								name="form[]"
+								data-error="Ошибка"
+								placeholder="+ 7 (_ _ _)   _ _ _    _ _    _ _"
+								class="phone-contact-block__phone"
+							/>
+							<button type="submit" class="phone-contact-block__button button">Отправить заявку
+					</div>
+				</section>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
