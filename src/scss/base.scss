@@ -139,7 +139,28 @@
 // Text
 ._text {
 	font-weight: 300;
-	@include adaptiveValue("font-size", 24, 16);
+	@include adaptiveValue("font-size", 24, 14);
 	line-height: math.div(29, 24);
 	color: $mainText;
+}
+
+//svg__bottom
+.custom-shape-divider-top-1644299264 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	overflow: hidden;
+	line-height: 0;
+}
+
+.custom-shape-divider-top-1644299264 svg {
+	position: relative;
+	display: block;
+	width: calc(276% + 1.3px);
+	height: 135px;
+}
+
+.custom-shape-divider-top-1644299264 .shape-fill {
+	fill: #ffffff;
 }

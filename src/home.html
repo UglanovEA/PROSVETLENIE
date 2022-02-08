@@ -144,7 +144,10 @@
 				<section class="block-helps helps-block">
 					<div class="helps-block__container">
 						<div class="helps-block__body">
-							<h2 class="helps-block__title _title">Оказываем помощь в <span>различных</span> сферах</h2>
+							<h2 class="helps-block__title _title">
+								Оказываем помощь<br />
+								<span>в различных</span> сферах
+							</h2>
 							<div class="helps-block__items">
 								<div class="helps-block__item item-helps-block">
 									<div class="item-helps-block__icon">
@@ -207,32 +210,43 @@
 					</div>
 				</section>
 				<section class="block-contact-phone phone-contact-block">
+					<div class="phone-contact-block__svg custom-shape-divider-top-1644299264">
+						<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+							<path
+								d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+								class="shape-fill"
+							></path>
+						</svg>
+					</div>
 					<div class="phone-contact-block__container">
 						<button class="phone-contact-block__btn _icon-arrowCircle"></button>
 						<h2 class="phone-contact-block__title _title">Свяжитесь <span>с нами</span></h2>
 						<div class="phone-contact-block__subtitle">Оставьте свои контакты и мы свяжемся с Вами</div>
-						<form class="phone-contact-block__form form" action="#">
-							<div class="phone-contact-block__name ">
-								<div class="phone-contact-block__icon _icon-user"></div>
+						<form class="phone-contact-block__form" action="#">
+							<div class="phone-contact-block__name">
+								<div type="submit" class="phone-contact-block__icon _icon-user"></div>
 								<input
-								autocomplete="off"
-								type="text"
-								name="form[]"
-								data-error="Ошибка"
-								placeholder="Ваше имя"
-								class="phone-contact-block__input"
-							/>
+									autocomplete="off"
+									type="text"
+									name="form[]"
+									data-error="Ошибка"
+									placeholder="Ваше имя"
+									class="phone-contact-block__input"
+								/>
 							</div>
-
-							<input
-								autocomplete="off"
-								type="tel"
-								name="form[]"
-								data-error="Ошибка"
-								placeholder="+ 7 (_ _ _)   _ _ _    _ _    _ _"
-								class="phone-contact-block__phone"
-							/>
-							<button type="submit" class="phone-contact-block__button button">Отправить заявку
+							<div class="phone-contact-block__phone">
+								<div class="phone-contact-block__icon _icon-phone"></div>
+								<input
+									autocomplete="off"
+									type="tel"
+									name="form[]"
+									data-error="Ошибка"
+									placeholder="+ 7 (_ _ _)   _ _ _    _ _    _ _"
+									class="phone-contact-block__input"
+								/>
+							</div>
+							<button type="submit" class="phone-contact-block__button button">Отправить заявку</button>
+						</form>
 					</div>
 				</section>
 			</main>
