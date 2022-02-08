@@ -34,7 +34,7 @@ function initSliders() {
 			// Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation],
+			modules: [Navigation, Pagination],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 3,
@@ -58,12 +58,10 @@ function initSliders() {
 			*/
 
 			// Пагинация
-			/*
 			pagination: {
-				el: '.swiper-pagination',
+				el: ".swiper-pagination",
 				clickable: true,
 			},
-			*/
 
 			// Скроллбар
 			/*
@@ -80,11 +78,11 @@ function initSliders() {
 			},
 
 			// Брейкпоинты
-			/*
+
 			breakpoints: {
 				320: {
 					slidesPerView: 1,
-					spaceBetween: 0,
+					spaceBetween: 20,
 					autoHeight: true,
 				},
 				768: {
@@ -96,11 +94,11 @@ function initSliders() {
 					spaceBetween: 20,
 				},
 				1268: {
-					slidesPerView: 4,
+					slidesPerView: 3,
 					spaceBetween: 30,
 				},
 			},
-			*/
+
 			// События
 			on: {},
 		});

@@ -8,7 +8,6 @@
 	flex-wrap: wrap;
 	height: rem(55);
 	font-weight: 700;
-	@include adaptiveValue("width", 385, 185);
 	@include adaptiveValue("font-size", 24, 18);
 	line-height: math.div(29, 24);
 	color: #ffffff;
