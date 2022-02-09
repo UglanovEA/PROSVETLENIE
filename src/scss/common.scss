@@ -715,8 +715,29 @@
 	@include adaptiveValue("padding-top", 66, 30);
 	padding-bottom: rem(28);
 	z-index: 1;
+	&::before {
+		@extend %ic;
+		@extend ._icon-cross;
+		position: absolute;
+		color: #eef2f5;
+		@include adaptiveValue("font-size", 208, 141);
+		bottom: -15%;
+		@include adaptiveValue("right", 250, 0);
+		opacity: 0.6;
+	}
+
 	// .reviews-block__container
 	&__container {
+		&::before {
+			@extend %ic;
+			@extend ._icon-cross;
+			position: absolute;
+			color: #eef2f5;
+			@include adaptiveValue("font-size", 113, 93);
+			@include adaptiveValue("top", 150, 100);
+			@include adaptiveValue("right", 100, 0);
+			opacity: 0.6;
+		}
 	}
 	// .reviews-block__title
 	&__title {
@@ -803,7 +824,7 @@
 		@include adaptiveValue("font-size", 18, 14);
 		line-height: math.div(25, 18);
 		color: $mainText;
-		max-height: 150px;
+		max-height: 100px;
 		overflow: auto;
 		&:not(:last-child) {
 			margin-bottom: em(20, 25);
