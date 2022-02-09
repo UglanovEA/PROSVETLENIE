@@ -15,6 +15,8 @@
 	}
 	.block-successes {
 	}
+	.block-licenses {
+	}
 }
 // =============================================================================
 
@@ -531,6 +533,7 @@
 // =============================================================================
 .personal-block {
 	position: relative;
+	text-align: center;
 	@include adaptiveValue("padding-top", 67, 30);
 	@include adaptiveValue("padding-bottom", 80, 30);
 	// .personal-block__container
@@ -538,14 +541,12 @@
 	}
 	// .personal-block__title
 	&__title {
-		text-align: center;
 		&:not(:last-child) {
 			margin-bottom: em(22, 72);
 		}
 	}
 	// .personal-block__text
 	&__text {
-		text-align: center;
 		&:not(:last-child) {
 			margin-bottom: em(30, 24);
 		}
@@ -650,3 +651,58 @@
 		text-align: center;
 	}
 }
+//=============================================================================
+.licenses-block {
+	@include adaptiveValue("padding-top", 66, 30);
+	@include adaptiveValue("padding-bottom", 80, 30);
+	text-align: center;
+	// .licenses-block__container
+	&__container {
+	}
+	// .licenses-block__title
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: em(22, 72);
+		}
+	}
+	// .licenses-block__text
+	&__text {
+		&:not(:last-child) {
+			margin-bottom: em(32, 24);
+		}
+	}
+	// .licenses-block__body
+	&__body {
+		position: relative;
+	}
+	// .licenses-block__slider
+	&__slider {
+	}
+	// .licenses-block__wrapper
+	&__wrapper {
+	}
+	// .licenses-block__slide
+	&__slide {
+	}
+	// .licenses-block__img
+	&__img {
+		padding-bottom: 134%;
+		& img {
+			border: 1px solid #ebebeb;
+			border-radius: 22px;
+			object-position: center;
+		}
+	}
+	// .licenses-block__pgn
+	&__pgn {
+	}
+	// .licenses-block__btnPrev
+	&__btnPrev,
+	&__btnNext {
+		top: 45% !important;
+	}
+	// .licenses-block__btnNext
+	&__btnNext {
+	}
+}
+//=============================================================================
