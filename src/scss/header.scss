@@ -4,6 +4,10 @@
 	position: absolute;
 	left: 0;
 	top: 0;
+	&-noAbsolute {
+		position: relative;
+		background-color: #e0e7ec;
+	}
 	// .header__top
 	&__top {
 		position: relative;
