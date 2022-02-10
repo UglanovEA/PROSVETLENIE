@@ -46,7 +46,7 @@
 	// .main-block__promo
 	&__promo {
 		font-weight: 300;
-		font-size: rem(30);
+		@include adaptiveValue("font-size", 30, 20);
 		line-height: math.div(37, 30);
 		color: $mainColor;
 		&:not(:last-child) {
@@ -62,7 +62,7 @@
 	// .main-block__text
 	&__text {
 		&:not(:last-child) {
-			margin-bottom: em(54, 24);
+			@include adaptiveValue("margin-bottom", 54, 16);
 		}
 	}
 	// .main-block__buttons
@@ -104,9 +104,6 @@
 	@media (max-width: $mobile) {
 		@include adaptiveValue("margin-bottom", 20, 10);
 		width: 100%;
-		&:not(:last-child) {
-			margin-right: rem(0);
-		}
 	}
 }
 // =============================================================================
@@ -167,7 +164,7 @@
 	&__title {
 		position: relative;
 		font-weight: 700;
-		font-size: rem(24);
+		@include adaptiveValue("font-size", 24, 20);
 		line-height: math.div(32, 24);
 		color: $mainColor;
 		padding-bottom: rem(8);
@@ -181,22 +178,22 @@
 			border-radius: rem(12);
 		}
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 30, 15);
+			@include adaptiveValue("margin-bottom", 20, 14);
 		}
 	}
 	// .item-advantages-block__text
 	&__text {
-		font-size: rem(16);
+		@include adaptiveValue("font-size", 16, 14);
 		line-height: math.div(20, 16);
 		color: $mainText;
 	}
 }
 // =============================================================================
 .about-block {
-	padding: rem(30) 0 rem(30);
+	@include adaptiveValue("padding-top", 72, 20);
+	@include adaptiveValue("padding-bottom", 73, 20);
 	@media (min-width: $mobile) {
 		display: flex;
-		padding: rem(72) 0 rem(73);
 	}
 	// .about-block__content
 	&__content {
@@ -207,10 +204,8 @@
 	}
 	// .about-block__body
 	&__body {
-		padding-bottom: rem(30);
 		@media (min-width: $mobile) {
 			width: 45%;
-			padding-bottom: 0;
 		}
 	}
 	// .about-block__title
@@ -225,6 +220,7 @@
 	// .about-block__media
 	&__media {
 		position: relative;
+		margin-bottom: rem(22);
 		& img {
 			max-width: 100%;
 		}
@@ -240,6 +236,7 @@
 		@media (min-width: $mobile) {
 			position: relative;
 			flex: 0 0 calc(((100vw - rem(30)) * 0.5) + rem(15));
+			margin-bottom: 0;
 			padding: 0 0 21.1% 0;
 			transform: translate(-100%, 0);
 			& img {
@@ -295,8 +292,8 @@
 	}
 	// .services-block__body
 	&__body {
-		@include adaptiveValue("padding-top", 73, 25);
-		@include adaptiveValue("padding-bottom", 75, 15);
+		@include adaptiveValue("padding-top", 73, 20);
+		@include adaptiveValue("padding-bottom", 75, 20);
 		padding-left: rem(37);
 		@media (max-width: $mobile) {
 			padding-left: 0;
@@ -367,7 +364,7 @@
 }
 // =============================================================================
 .helps-block {
-	@include adaptiveValue("padding-top", 66, 30);
+	@include adaptiveValue("padding-top", 66, 20);
 	@include adaptiveValue("padding-bottom", 36, 15);
 	// .helps-block__container
 	&__container {
@@ -393,7 +390,7 @@
 	}
 }
 .item-helps-block {
-	border: 1px solid #ebebeb;
+	border: rem(1) solid #ebebeb;
 	border-radius: rem(20);
 	@include adaptiveValue("padding-top", 62, 50);
 	@include adaptiveValue("padding-bottom", 30, 15);
@@ -445,9 +442,8 @@
 .phone-contact-block {
 	position: relative;
 	background-color: #e0e7ec;
+	overflow: hidden;
 	@include adaptiveValue("padding-bottom", 100, 20);
-	// .phone-contact-block__circle
-
 	// .phone-contact-block__svg
 	&__svg {
 	}
@@ -477,6 +473,7 @@
 			@include adaptiveValue("margin-bottom", 68, 30);
 		}
 	}
+	// .phone-contact-block__circle
 	&__circle {
 		position: absolute;
 		opacity: 0.7;
@@ -484,14 +481,14 @@
 	}
 	// .phone-contact-block__circle-1
 	&__circle-1 {
-		width: 303px;
-		height: 303px;
+		width: rem(303);
+		height: rem(303);
 		bottom: -15%;
 	}
 	// .phone-contact-block__circle-2
 	&__circle-2 {
-		width: 196px;
-		height: 196px;
+		width: rem(196);
+		height: rem(196);
 		top: 0;
 		right: 0;
 	}
@@ -550,6 +547,9 @@
 		&-icon {
 			padding-left: rem(69);
 		}
+		&-colorWhite {
+			color: #ffffff;
+		}
 		&::placeholder {
 			font-weight: 300;
 			font-size: rem(18);
@@ -565,8 +565,8 @@
 .personal-block {
 	position: relative;
 	text-align: center;
-	@include adaptiveValue("padding-top", 67, 30);
-	@include adaptiveValue("padding-bottom", 80, 30);
+	@include adaptiveValue("padding-top", 67, 20);
+	@include adaptiveValue("padding-bottom", 80, 20);
 	// .personal-block__container
 	&__container {
 	}
@@ -612,7 +612,7 @@
 		line-height: math.div(29, 24);
 		text-align: center;
 		color: $mainColor;
-		margin-top: 15px;
+		margin-top: rem(15);
 		&:not(:last-child) {
 			margin-bottom: em(12, 24);
 		}
@@ -628,19 +628,20 @@
 //=============================================================================
 .successes-block {
 	background-color: #e0e7ec;
-	@include adaptiveValue("padding-top", 80, 30);
-	@include adaptiveValue("padding-bottom", 71, 30);
+	@include adaptiveValue("padding-top", 80, 20);
+	@include adaptiveValue("padding-bottom", 71, 20);
 	// .successes-block__container
 	&__container {
-	}
-	// .successes-block__body
-	&__body {
 	}
 	// .successes-block__items
 	&__items {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(rem(268), 1fr));
-		gap: rem(30);
+		grid-template-columns: repeat(auto-fit, minmax(rem(130), 1fr));
+		column-gap: rem(30);
+		row-gap: rem(15);
+		@media (max-width: $mobile) {
+			column-gap: rem(15);
+		}
 	}
 	// .successes-block__item
 	&__item {
@@ -651,7 +652,7 @@
 	&__content {
 		position: relative;
 		&:not(:last-child) {
-			margin-bottom: rem(35);
+			@include adaptiveValue("margin-bottom", 35, 20);
 		}
 	}
 	// .item-successes-block__number
@@ -660,12 +661,12 @@
 		bottom: 0;
 		left: 0;
 		font-weight: 700;
-		font-size: rem(72);
+		@include adaptiveValue("font-size", 72, 52);
 		line-height: math.div(88, 72);
 		color: $mainBlue;
 		z-index: 2;
 		@media (max-width: $mobile) {
-			left: rem(90);
+			left: rem(40);
 		}
 	}
 	// .item-successes-block__icon
@@ -674,7 +675,7 @@
 	// .item-successes-block__subtitle
 	&__subtitle {
 		font-weight: 700;
-		@include adaptiveValue("font-size", 30, 20);
+		@include adaptiveValue("font-size", 30, 16);
 		line-height: math.div(37, 30);
 		color: $mainColor;
 	}
@@ -684,8 +685,8 @@
 }
 //=============================================================================
 .licenses-block {
-	@include adaptiveValue("padding-top", 66, 30);
-	@include adaptiveValue("padding-bottom", 80, 30);
+	@include adaptiveValue("padding-top", 66, 20);
+	@include adaptiveValue("padding-bottom", 80, 20);
 	text-align: center;
 	// .licenses-block__container
 	&__container {
@@ -717,11 +718,12 @@
 	}
 	// .licenses-block__img
 	&__img {
-		padding-bottom: 134%;
+		padding-bottom: 142%;
 		& img {
 			border: rem(1) solid #ebebeb;
 			border-radius: rem(22);
 			object-position: center;
+			object-fit: cover;
 		}
 	}
 	// .licenses-block__pgn
@@ -741,7 +743,7 @@
 	position: relative;
 	background-color: #e0e7ec;
 	overflow: hidden;
-	@include adaptiveValue("padding-top", 66, 30);
+	@include adaptiveValue("padding-top", 66, 20);
 	padding-bottom: rem(28);
 	z-index: 1;
 	&::before {
@@ -754,7 +756,6 @@
 		@include adaptiveValue("right", 250, 0);
 		opacity: 0.6;
 	}
-
 	// .reviews-block__container
 	&__container {
 		&::before {
@@ -812,7 +813,6 @@
 	&__btnPrev,
 	&__btnNext {
 		color: #ffffff !important;
-
 		@media (max-width: $mobile) {
 			top: 85% !important;
 		}
@@ -830,8 +830,8 @@
 	// .slide-reviews-block__img
 	&__img {
 		position: relative;
-		flex: 0 0 100px;
-		height: 100px;
+		flex: 0 0 rem(100);
+		height: rem(100);
 		& img {
 			position: absolute;
 			width: 100%;
@@ -853,7 +853,7 @@
 		@include adaptiveValue("font-size", 18, 14);
 		line-height: math.div(25, 18);
 		color: $mainText;
-		max-height: 100px;
+		max-height: rem(100);
 		overflow: auto;
 		&:not(:last-child) {
 			margin-bottom: em(20, 25);
@@ -863,7 +863,7 @@
 	&__title {
 		position: relative;
 		font-weight: 700;
-		padding-left: 44px;
+		padding-left: rem(44);
 		@include adaptiveValue("font-size", 24, 20);
 		line-height: math.div(29, 24);
 		&::after {
@@ -871,8 +871,8 @@
 			position: absolute;
 			left: 0;
 			top: 50%;
-			width: 24px;
-			height: 2px;
+			width: rem(24);
+			height: rem(2);
 			background-color: $mainColor;
 		}
 		&:not(:last-child) {
