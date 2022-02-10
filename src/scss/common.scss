@@ -19,6 +19,8 @@
 	}
 	.block-reviews {
 	}
+	.block-news {
+	}
 }
 // =============================================================================
 
@@ -708,10 +710,10 @@
 	}
 }
 //=============================================================================
-
 .reviews-block {
 	position: relative;
 	background-color: #e0e7ec;
+	overflow: hidden;
 	@include adaptiveValue("padding-top", 66, 30);
 	padding-bottom: rem(28);
 	z-index: 1;
@@ -855,5 +857,91 @@
 		font-weight: 300;
 		@include adaptiveValue("font-size", 18, 14);
 		line-height: math.div(22, 18);
+	}
+}
+//=============================================================================
+.news-block {
+	@include adaptiveValue("padding-top", 66, 20);
+	@include adaptiveValue("padding-bottom", 80, 20);
+	text-align: center;
+	// .news-block__container
+	&__container {
+	}
+	// .news-block__title
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: em(22, 72);
+		}
+	}
+	// .news-block__body
+	&__body {
+		position: relative;
+	}
+	// .news-block__slider
+	&__slider {
+	}
+	// .news-block__wrapper
+	&__wrapper {
+	}
+	// .news-block__slide
+	&__slide {
+	}
+	// .news-block__btnPrev
+	&__btnPrev,
+	&__btnNext {
+		top: 27.5% !important;
+		@media (min-width: $mobile) {
+			top: 30% !important;
+		}
+	}
+	// .news-block__btnNext
+	&__btnNext {
+	}
+}
+.slide-news-block {
+	// .slide-news-block__img
+	&__img {
+		padding-bottom: 67%;
+		& img {
+			border: rem(1) solid #ebebeb;
+			border-radius: rem(22);
+			object-position: center;
+			object-fit: cover;
+		}
+	}
+	// .slide-news-block__title
+	&__title {
+		font-weight: 700;
+		@include adaptiveValue("font-size", 24, 22);
+		line-height: math.div(29, 24);
+		color: $mainColor;
+		@include adaptiveValue("margin-top", 29, 16);
+		&:not(:last-child) {
+			margin-bottom: em(8, 29);
+		}
+	}
+	// .slide-news-block__tetx
+	&__text {
+		font-weight: 300;
+		@include adaptiveValue("font-size", 18, 14);
+		line-height: math.div(25, 18);
+		color: $mainText;
+		&:not(:last-child) {
+			margin-bottom: em(7, 25);
+		}
+	}
+	// .slide-news-block__link
+	&__link {
+		font-weight: 700;
+		font-size: rem(18);
+		line-height: math.div(22, 18);
+		text-decoration: underline !important;
+		transition: all 0.3s ease 0s;
+		color: $mainBlue;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $mainColor;
+			}
+		}
 	}
 }

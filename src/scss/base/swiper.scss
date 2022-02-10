@@ -44,16 +44,20 @@
 	display: flex;
 	justify-content: center;
 	gap: 30px;
-	padding-top: 20px;
+	padding-top: 30px;
 	padding-bottom: 16px;
+	@media (max-width: 767.98px) {
+		gap: 20px;
+	}
 }
 .swiper-pagination-bullet {
 	position: relative;
 	display: block;
-	width: 12px;
+	flex: 0 0 12px;
 	height: 12px;
 	border-radius: 50%;
 	background-color: #e0e7ec;
+	text-align: center;
 	opacity: 1;
 	transition: all 0.3s ease 0s;
 	&-active {
