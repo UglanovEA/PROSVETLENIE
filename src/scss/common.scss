@@ -445,13 +445,16 @@
 .phone-contact-block {
 	position: relative;
 	background-color: #e0e7ec;
-	@include adaptiveValue("padding-bottom", 107, 30);
+	@include adaptiveValue("padding-bottom", 100, 20);
+	// .phone-contact-block__circle
+
 	// .phone-contact-block__svg
 	&__svg {
 	}
 	// .phone-contact-block__container
 	&__container {
 		text-align: center;
+		position: relative;
 	}
 	// .phone-contact-block__btn
 	&__btn {
@@ -474,6 +477,24 @@
 			@include adaptiveValue("margin-bottom", 68, 30);
 		}
 	}
+	&__circle {
+		position: absolute;
+		opacity: 0.7;
+		z-index: 1;
+	}
+	// .phone-contact-block__circle-1
+	&__circle-1 {
+		width: 303px;
+		height: 303px;
+		bottom: -15%;
+	}
+	// .phone-contact-block__circle-2
+	&__circle-2 {
+		width: 196px;
+		height: 196px;
+		top: 0;
+		right: 0;
+	}
 	// .phone-contact-block__title
 	&__title {
 		&:not(:last-child) {
@@ -483,7 +504,7 @@
 	// .phone-contact-block__subtitle
 	&__subtitle {
 		font-weight: 300;
-		@include adaptiveValue("font-size", 30, 24);
+		@include adaptiveValue("font-size", 30, 20);
 		line-height: math.div(37, 30);
 		color: $mainColor;
 		&:not(:last-child) {
@@ -495,14 +516,19 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
 		gap: rem(20);
+		position: relative;
+		z-index: 2;
 	}
 	// .phone-contact-block__name
 	&__name,
 	&__phone {
-		height: rem(55);
-		border: rem(1) solid $mainBlue;
-		border-radius: rem(8);
 		position: relative;
+	}
+	// .phone-contact-block__name
+	&__name {
+	}
+	// .phone-contact-block__phone
+	&__phone {
 	}
 	// .phone-contact-block__icon
 	&__icon {
@@ -515,13 +541,15 @@
 	}
 	// .phone-contact-block__input
 	&__input {
-		display: block;
 		width: 100%;
 		background-color: inherit;
 		height: rem(55);
 		border: rem(1) solid $mainBlue;
 		border-radius: rem(8);
-		padding: 0 rem(20) 0 rem(69);
+		padding: 0 rem(20);
+		&-icon {
+			padding-left: rem(69);
+		}
 		&::placeholder {
 			font-weight: 300;
 			font-size: rem(18);
@@ -531,7 +559,6 @@
 	}
 	// .phone-contact-block__button
 	&__button {
-		display: block;
 	}
 }
 // =============================================================================
@@ -862,13 +889,13 @@
 //=============================================================================
 .news-block {
 	@include adaptiveValue("padding-top", 66, 20);
-	@include adaptiveValue("padding-bottom", 80, 20);
-	text-align: center;
+	padding-bottom: rem(10);
 	// .news-block__container
 	&__container {
 	}
 	// .news-block__title
 	&__title {
+		text-align: center;
 		&:not(:last-child) {
 			margin-bottom: em(22, 72);
 		}
