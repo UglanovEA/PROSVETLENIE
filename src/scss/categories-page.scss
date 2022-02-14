@@ -1,14 +1,23 @@
 .block-categories {
 }
 .categories-block {
+	@include adaptiveValue("padding-top", 61, 20);
+	@include adaptiveValue("padding-bottom", 30, 20);
 	// .categories-block__container
 	&__container {
 	}
 	// .categories-block__title
 	&__title {
+		text-align: center;
+		&:not(:last-child) {
+			margin-bottom: em(20, 72);
+		}
 	}
 	// .categories-block__items
 	&__items {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(rem(290), 1fr));
+		gap: rem(20);
 	}
 	// .categories-block__item
 	&__item {
@@ -17,20 +26,71 @@
 .item-categories-block {
 	// .item-categories-block__img
 	&__img {
+		padding-bottom: 63%;
+		position: relative;
+		& img {
+			border: rem(1) solid #ebebeb;
+			border-radius: rem(22);
+			object-position: center;
+			object-fit: cover;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(180deg, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1) 100%);
+			z-index: 2;
+		}
 	}
 	// .item-categories-block__content
 	&__content {
 	}
 	// .item-categories-block__title
 	&__title {
+		font-weight: 700;
+		@include adaptiveValue("font-size", 30, 24);
+		line-height: math.div(37, 30);
+		text-align: center;
+		color: $mainColor;
+		&:not(:last-child) {
+			margin-bottom: em(9, 30);
+		}
 	}
 	// .item-categories-block__cost
 	&__cost {
+		background-color: rgba(224, 231, 236, 0.35);
+		border-radius: 69px;
+		font-weight: 300;
+		@include adaptiveValue("font-size", 18, 16);
+		line-height: math.div(22, 18);
+		color: $mainText;
+		text-align: center;
+		padding: rem(14) 0;
+		& span {
+			font-weight: 700;
+			@include adaptiveValue("font-size", 30, 20);
+			line-height: math.div(37, 30);
+			color: $mainBlue;
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(18);
+		}
 	}
 	// .item-categories-block__text
 	&__text {
+		font-weight: 300;
+		@include adaptiveValue("font-size", 18, 14);
+		line-height: math.div(22, 18);
+		text-align: center;
+		color: $mainText;
+		&:not(:last-child) {
+			margin-bottom: em(20, 18);
+		}
 	}
 	// .item-categories-block__btn
 	&__btn {
+		text-align: center;
 	}
 }
