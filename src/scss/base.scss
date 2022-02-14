@@ -169,7 +169,7 @@
 	border-top: 1px solid #bfd2e1;
 	padding: rem(16) 0;
 	@media (min-width: $mobile) {
-		display: none;
+		background-color: #ffffff;
 	}
 	// .breadcrumbs__container
 
@@ -183,7 +183,8 @@
 	// .breadcrumbs__item
 	&__item {
 		&::after {
-			display: inline-block;
+			display: inline-flex;
+			vertical-align: middle;
 			@extend %ic;
 			content: "\e904";
 			font-size: rem(8);
@@ -194,8 +195,8 @@
 		&-last {
 			.breadcrumbs__link {
 				font-weight: 700;
-				font-size: rem(14);
-				line-height: math.div(17, 14);
+				@include adaptiveValue("font-size", 18, 14);
+				line-height: math.div(17, 18);
 				color: $mainBlue;
 			}
 			&::before,
@@ -207,8 +208,8 @@
 	// .breadcrumbs__link
 	&__link {
 		font-weight: 300;
-		font-size: rem(14);
-		line-height: math.div(17, 14);
+		@include adaptiveValue("font-size", 18, 14);
+		line-height: math.div(17, 18);
 		color: $mainText;
 	}
 }

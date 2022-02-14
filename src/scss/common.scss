@@ -684,7 +684,7 @@
 }
 //=============================================================================
 .licenses-block {
-	@include adaptiveValue("padding-top", 66, 20);
+	@include adaptiveValue("padding-top", 30, 20);
 	@include adaptiveValue("padding-bottom", 80, 20);
 	text-align: center;
 	// .licenses-block__container
