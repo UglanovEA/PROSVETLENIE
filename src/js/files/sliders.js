@@ -374,6 +374,75 @@ function initSliders() {
 			on: {},
 		});
 	}
+	if (document.querySelector(".aboutClinic-block__slider")) {
+		// Указываем скласс нужного слайдера
+		// Создаем слайдер
+		new Swiper(".aboutClinic-block__slider", {
+			// Указываем скласс нужного слайдера
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Navigation, Pagination],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1,
+			spaceBetween: 20,
+			// autoHeight: true,
+			speed: 800,
+			// touchRatio: 0,
+			//simulateTouch: false,
+			// loop: true,
+			//preloadImages: false,
+			//lazy: true,
+
+			/*
+			// Эффекты
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+			// Пагинация
+			pagination: {
+				el: ".aboutClinic-block__pgn",
+				clickable: true,
+			},
+
+			// Скроллбар
+			/*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
+
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: ".aboutClinic-block__btnPrev",
+				nextEl: ".aboutClinic-block__btnNext",
+			},
+
+			// Брейкпоинты
+
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+				},
+				768: {
+					slidesPerView: 1,
+				},
+				992: {
+					slidesPerView: 1,
+				},
+				1268: {
+					slidesPerView: 1,
+				},
+			},
+
+			// События
+			on: {},
+		});
+	}
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 function initSlidersScroll() {
