@@ -2,7 +2,7 @@
 }
 .categories-block {
 	@include adaptiveValue("padding-top", 61, 20);
-	@include adaptiveValue("padding-bottom", 30, 20);
+	@include adaptiveValue("padding-bottom", 30, 10);
 	// .categories-block__container
 	&__container {
 	}
@@ -111,7 +111,7 @@
 }
 .characteristics-block {
 	@include adaptiveValue("padding-top", 80, 20);
-	@include adaptiveValue("padding-bottom", 36, 15);
+	@include adaptiveValue("padding-bottom", 36, 10);
 	// .characteristics-block__container
 	&__container {
 	}
@@ -191,7 +191,7 @@
 		line-height: math.div(29, 24);
 		color: $mainColor;
 		border-bottom: rem(2) solid #ebebeb;
-		padding: rem(20) 0;
+		padding-bottom: rem(20);
 	}
 	// .prices-characteristics-block__name
 	&__name {
@@ -203,7 +203,7 @@
 	&__content {
 		padding: rem(20) 0;
 		&:not(:last-child) {
-			margin-bottom: rem(20);
+			@include adaptiveValue("margin-bottom", 20, 10);
 		}
 	}
 	// .prices-characteristics-block__row
@@ -211,7 +211,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: rem(20);
+		@include adaptiveValue("padding", 20, 10);
 	}
 	// .prices-characteristics-block__row-blue
 	&__row-blue {
@@ -222,14 +222,14 @@
 	&__description {
 		font-weight: 300;
 		@include adaptiveValue("font-size", 24, 16);
-		line-height: math.div(29, 24) 29px;
+		line-height: math.div(29, 24);
 		color: $mainColor;
 	}
 	// .prices-characteristics-block__cost
 	&__cost {
 		font-weight: 700;
-		font-size: 24px;
-		line-height: math.div(29, 24) 29px;
+		@include adaptiveValue("font-size", 24, 16);
+		line-height: math.div(29, 24);
 		color: $mainBlue;
 		& span {
 			font-weight: 300;

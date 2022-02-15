@@ -2,7 +2,7 @@
 }
 .aboutClinic-block {
 	@include adaptiveValue("padding-top", 60, 20);
-	@include adaptiveValue("padding-bottom", 30, 20);
+	@include adaptiveValue("padding-bottom", 30, 10);
 	// .aboutClinic-block__container
 	&__container {
 		@media (min-width: $mobile) {
@@ -11,7 +11,7 @@
 	}
 	// .aboutClinic-block__content
 	&__content {
-		padding: 0px 40px 20px 0px;
+		padding: 0 rem(40) rem(20) 0;
 	}
 	// .aboutClinic-block__title
 	&__title {
@@ -84,13 +84,13 @@
 	}
 	// .aboutClinic-block__btnPrev
 	&__btnPrev {
-		transform: translate(100%, -50%);
+		transform: translate(50%, -50%);
 		left: 0;
 	}
 	// .aboutClinic-block__btnNext
 	&__btnNext {
 		right: 0;
-		transform: translate(-100%, -50%) rotate(-180deg);
+		transform: translate(-50%, -50%) rotate(-180deg);
 	}
 	&__btnPrev.swiper-button-disabled,
 	&__btnNext.swiper-button-disabled {

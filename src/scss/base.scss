@@ -129,7 +129,7 @@
 ._title {
 	font-family: CaviarDreams;
 	font-weight: 700;
-	@include adaptiveValue("font-size", 72, 36);
+	@include adaptiveValue("font-size", 72, 32);
 	line-height: math.div(91, 72);
 	color: $mainColor;
 	& span {

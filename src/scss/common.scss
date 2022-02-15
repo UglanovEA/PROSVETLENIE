@@ -134,8 +134,8 @@
 	gap: rem(18);
 	background-color: #e0e7ec;
 	border-radius: rem(22);
-	padding-top: 23px;
-	padding-left: 20px;
+	padding-top: rem(23);
+	padding-left: rem(20);
 	@include adaptiveValue("padding-bottom", 39, 15);
 	@include adaptiveValue("padding-right", 30, 15);
 	// .item-advantages-block__icon
@@ -419,6 +419,10 @@
 			background: rgba(191, 210, 225, 0.4);
 			border-radius: 50%;
 		}
+		& img {
+			position: relative;
+			z-index: 2;
+		}
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 28, 15);
 		}
@@ -599,8 +603,8 @@
 	&__img {
 		padding-bottom: 101%;
 		& img {
-			border: 1px solid #ebebeb;
-			border-radius: 22px;
+			border: rem(1) solid #ebebeb;
+			border-radius: rem(22);
 			object-position: center;
 		}
 	}

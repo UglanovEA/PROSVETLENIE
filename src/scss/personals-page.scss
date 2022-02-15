@@ -38,10 +38,10 @@
 	// .personals-block__btnNext
 	&__btnNext {
 	}
-	&__btnPrev,
-	&__btnNext {
+	&__btnPrev.swiper-button-prev,
+	&__btnNext.swiper-button-next {
 		@media (max-width: $mobile) {
-			top: 45% !important;
+			@include adaptiveValue("top", 600, 170);
 		}
 	}
 }
@@ -54,9 +54,10 @@
 			padding-bottom: 30%;
 		}
 		& img {
-			border: 1px solid #ebebeb;
-			border-radius: 22px;
+			border: rem(1) solid #ebebeb;
+			border-radius: rem(22);
 			object-position: center;
+			object-fit: cover;
 		}
 		&:not(:last-child) {
 			margin-bottom: rem(15);
@@ -67,7 +68,7 @@
 	}
 	// .slide-personals-block__name
 	&__name {
-		border-bottom: 1px solid #ebebeb;
+		border-bottom: rem(1) solid #ebebeb;
 		padding-bottom: rem(27);
 		@media (max-width: $mobile) {
 			text-align: center;
