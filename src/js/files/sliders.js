@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation, Pagination } from "swiper";
+import Swiper, { Navigation, Pagination, Autoplay } from "swiper";
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay,
@@ -34,27 +34,27 @@ function initSliders() {
 			// Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Pagination],
+			modules: [Navigation, Pagination, Autoplay],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 3,
 			spaceBetween: 20,
 			autoHeight: true,
 			speed: 800,
+			parallax: true,
 			// touchRatio: 0,
 			//simulateTouch: false,
 			// loop: true,
 			//preloadImages: false,
 			//lazy: true,
 
-			/*
 			// Эффекты
-			effect: 'fade',
+			effect: "fade",
 			autoplay: {
 				delay: 3000,
 				disableOnInteraction: false,
 			},
-			*/
+
 			// Пагинация
 			pagination: {
 				el: ".personal-block__png",
@@ -104,7 +104,7 @@ function initSliders() {
 			// Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Pagination],
+			modules: [Navigation, Pagination, Autoplay],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 4,
@@ -117,14 +117,13 @@ function initSliders() {
 			//preloadImages: false,
 			//lazy: true,
 
-			/*
 			// Эффекты
-			effect: 'fade',
+			effect: "fade",
 			autoplay: {
 				delay: 3000,
 				disableOnInteraction: false,
 			},
-			*/
+
 			// Пагинация
 			pagination: {
 				el: ".licenses-block__pgn",
@@ -174,7 +173,7 @@ function initSliders() {
 			// Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Pagination],
+			modules: [Navigation, Pagination, Autoplay],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 2,
@@ -187,14 +186,13 @@ function initSliders() {
 			//preloadImages: false,
 			//lazy: true,
 
-			/*
 			// Эффекты
-			effect: 'fade',
+			effect: "fade",
 			autoplay: {
 				delay: 3000,
 				disableOnInteraction: false,
 			},
-			*/
+
 			// Пагинация
 			pagination: {
 				el: ".reviews-block__pgn",
@@ -243,7 +241,7 @@ function initSliders() {
 			// Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Pagination],
+			modules: [Navigation, Pagination, Autoplay],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 3,
@@ -256,14 +254,13 @@ function initSliders() {
 			//preloadImages: false,
 			//lazy: true,
 
-			/*
 			// Эффекты
-			effect: 'fade',
+			effect: "fade",
 			autoplay: {
 				delay: 3000,
 				disableOnInteraction: false,
 			},
-			*/
+
 			// Пагинация
 			pagination: {
 				el: ".news-block__pgn",
@@ -312,7 +309,7 @@ function initSliders() {
 			// Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Pagination],
+			modules: [Navigation, Pagination, Autoplay],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
@@ -325,14 +322,13 @@ function initSliders() {
 			//preloadImages: false,
 			//lazy: true,
 
-			/*
 			// Эффекты
-			effect: 'fade',
+			effect: "fade",
 			autoplay: {
 				delay: 3000,
 				disableOnInteraction: false,
 			},
-			*/
+
 			// Пагинация
 			pagination: {
 				el: ".personals-block__pgn",
@@ -381,7 +377,7 @@ function initSliders() {
 			// Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Pagination],
+			modules: [Navigation, Pagination, Autoplay],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
@@ -394,14 +390,13 @@ function initSliders() {
 			//preloadImages: false,
 			//lazy: true,
 
-			/*
 			// Эффекты
-			effect: 'fade',
+			effect: "fade",
 			autoplay: {
 				delay: 3000,
 				disableOnInteraction: false,
 			},
-			*/
+
 			// Пагинация
 			pagination: {
 				el: ".aboutClinic-block__pgn",
