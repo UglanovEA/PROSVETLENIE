@@ -160,12 +160,29 @@ class ScrollWatcher {
 			// пишем уникальную специфику
 		}
 		if (entry.isIntersecting) {
-			!targetElement.classList.contains("scale-up-top") ? targetElement.classList.add("scale-up-top") : null;
-			!targetElement.classList.contains("slide-top") ? targetElement.classList.add("slide-top") : null;
+			targetElement.classList.contains("advantages-block__items") ? targetElement.classList.add("slide-top") : null;
+			targetElement.classList.contains("helps-block__title") ? targetElement.classList.add("slide-top") : null;
+			targetElement.classList.contains("helps-block__item") ? targetElement.classList.add("slide-top") : null;
+			targetElement.classList.contains("personal-block__title") ? targetElement.classList.add("slide-top") : null;
+			targetElement.classList.contains("personal-block__text") ? targetElement.classList.add("slide-top") : null;
+			targetElement.classList.contains("licenses-block__title") ? targetElement.classList.add("slide-top") : null;
+			targetElement.classList.contains("licenses-block__text") ? targetElement.classList.add("slide-top") : null;
+			targetElement.classList.contains("about-block__body") ? targetElement.classList.add("slide-in-left") : null;
+			targetElement.classList.contains("reviews-block__title") ? targetElement.classList.add("slide-in-left") : null;
+			targetElement.classList.contains("services-block__body") ? targetElement.classList.add("slide-in-right") : null;
+			targetElement.classList.contains("news-block__title") ? targetElement.classList.add("slide-in-right") : null;
 		} else {
-			// Не видим объект
-			targetElement.classList.contains("scale-up-top") ? targetElement.classList.remove("scale-up-top") : null;
-			targetElement.classList.contains("slide-top") ? targetElement.classList.remove("slide-top") : null;
+			targetElement.classList.contains("advantages-block__items") ? targetElement.classList.remove("slide-top") : null;
+			targetElement.classList.contains("helps-block__title") ? targetElement.classList.remove("slide-top") : null;
+			targetElement.classList.contains("helps-block__item") ? targetElement.classList.remove("slide-top") : null;
+			targetElement.classList.contains("personal-block__title") ? targetElement.classList.remove("slide-top") : null;
+			targetElement.classList.contains("personal-block__text") ? targetElement.classList.remove("slide-top") : null;
+			targetElement.classList.contains("licenses-block__title") ? targetElement.classList.remove("slide-top") : null;
+			targetElement.classList.contains("licenses-block__text") ? targetElement.classList.remove("slide-top") : null;
+			targetElement.classList.contains("about-block__body") ? targetElement.classList.remove("slide-in-left") : null;
+			targetElement.classList.contains("reviews-block__title") ? targetElement.classList.remove("slide-in-left") : null;
+			targetElement.classList.contains("services-block__body") ? targetElement.classList.remove("slide-in-right") : null;
+			targetElement.classList.contains("news-block__title") ? targetElement.classList.remove("slide-in-right") : null;
 		}
 	}
 }
