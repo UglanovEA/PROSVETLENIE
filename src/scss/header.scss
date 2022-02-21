@@ -48,8 +48,13 @@
 		@media (max-width: $mobile) {
 			display: none;
 		}
-		&:hover {
-			color: $mainBlue;
+		& span {
+			@media (any-hover: hover) {
+				&:hover {
+					color: $mainBlue;
+					text-decoration: underline;
+				}
+			}
 		}
 	}
 	// .top-header__phone
@@ -90,9 +95,12 @@
 	@media (max-width: $mobile) {
 		margin: 0 auto;
 	}
-	&:hover {
-		.phone-top-header__number {
-			color: $mainBlue;
+	@media (any-hover: hover) {
+		&:hover {
+			.phone-top-header__number {
+				color: $mainBlue;
+				text-decoration: underline;
+			}
 		}
 	}
 }

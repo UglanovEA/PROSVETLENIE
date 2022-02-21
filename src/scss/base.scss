@@ -3,7 +3,7 @@
 @import "base/forms/forms";
 
 // Стили попапов
-// @import "base/popup";
+@import "base/popup";
 
 // Стили спойлеров
 @import "base/spollers";
@@ -219,9 +219,6 @@
 .scale-up-top {
 	animation: scale-up-top 0.7s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
-.slide-top {
-	animation: slide-top 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
 @keyframes scale-up-top {
 	0% {
 		transform: scale(0.5);
@@ -232,7 +229,9 @@
 		transform-origin: 50% 0%;
 	}
 }
-
+.slide-top {
+	animation: slide-top 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
 @keyframes slide-top {
 	0% {
 		transform: translateY(100px);

@@ -508,7 +508,7 @@
 		line-height: math.div(37, 30);
 		color: $mainColor;
 		&:not(:last-child) {
-			margin-bottom: em(39, 30);
+			@include adaptiveValue("margin-bottom", 29, 15);
 		}
 	}
 	// .phone-contact-block__form
@@ -518,6 +518,9 @@
 		gap: rem(20);
 		position: relative;
 		z-index: 2;
+		&-column {
+			grid-template-columns: minmax(1fr, 250px);
+		}
 	}
 	// .phone-contact-block__name
 	&__name,
